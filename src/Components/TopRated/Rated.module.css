@@ -1,0 +1,111 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.allMovies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.rated {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background-color: grey;
+    margin: 15px;
+    overflow: hidden;
+    animation: movie 0.5s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.rated::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.rated:hover {
+    transform: scale(1.05);
+}
+
+.rated img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 20px 15px 15px 15px;
+    opacity: 0;
+    font-family: cursive;
+}
+
+.rated:hover img {
+    filter: blur(5px);
+}
+
+.rated:hover .desc {
+    opacity: 1;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition:ease-in-out 0.5s;
+}
+
+.rated:hover .icon {
+    opacity: 0;
+}
+
+.rated:hover .flag {
+    opacity: 0;
+}
+
+.rated .flag {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.482);
+    color: rgba(0, 0, 0, 0.814);
+    padding: 5px 5px;
+    border-radius: 30px;
+}
+
+@keyframes movie {
+    0% {
+        transform: translateY(25px) scale(0.95);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}

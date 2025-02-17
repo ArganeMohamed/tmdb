@@ -1,0 +1,175 @@
+.tvDetails {
+    margin: 40px;
+}
+
+.singleTV {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgCon {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    background-color: grey;
+    margin-left: 15px;
+}
+
+.imgCon .poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgCon .flag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.imgCon .vote {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(128, 128, 128, 0.771);
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+/* .value {
+    font-style: italic;
+} */
+
+.showDet {
+    width: 750px;
+    text-align: left;
+    margin: 0px 20px ;
+}
+
+.showDet * {
+    margin-top: 25px;
+}
+
+.key {
+    font-weight: 900;
+}
+
+
+#desc {
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.seasonsSection {
+    margin-top: 60px;
+}
+
+.seasonsSection h2 {
+    text-align: start;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.seasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.season {
+    width: 170px;
+    height: 250px;
+    background-color: grey;
+    margin: 15px;
+}
+
+.season img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.season {
+    position: relative;
+}
+
+.seasonName {
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+}
+
+.sDate {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.season::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(transparent,black) ;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    text-align: left;
+}
+
+
+.videoContainer iframe {
+    margin-top: 15px;
+    width: 600px;
+    height: 350px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .showDet {
+        width: 600px;
+    }
+
+    .videoContainer iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .singleTV {
+        display: inline-block;
+    }
+
+    .imgCon {
+        margin: auto;
+    }
+
+    .showDet {
+        width: 100%;
+    }
+
+}
